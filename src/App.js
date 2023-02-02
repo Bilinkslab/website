@@ -1,9 +1,9 @@
-import Header from "./components/Header";
+import Banner from "./components/Banner";
 import "./assets/css/main.css";
 function App() {
   return (
     <div>
-      <Header />
+      <Banner />
     </div>
   );
 }
