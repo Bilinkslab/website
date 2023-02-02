@@ -26,6 +26,9 @@ export default function Banner() {
           expedita vel adipisci rem iure. Laboriosam dolorem, laudantium sint
           aspernatur quos dolor!
         </span>
+        <div className="explorer">
+          <label htmlFor="slideBanner" className="explore">EXPLORE</label>
+        </div>
       </div>
       <div className="social-links">
         <i className="fa fa-facebook"></i>
