@@ -1,13 +1,15 @@
-import Header from "./components/Header";
 import "./assets/css/main.css";
 import Header from "./components/Header";
+import Banner from "./components/Banner";
 import Sidenav from "./components/Sidenav";
+import AboutUs from "./components/AboutUs";
 function App() {
   return (
     <div>
-      <Header />
-      <Sidenav />
-      <Banner />
+      {/* <Header /> */}
+      {/* <Sidenav /> */}
+      {/* <Banner /> */}
+      <AboutUs />
     </div>
   );
 }
