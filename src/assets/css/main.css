@@ -1,14 +1,340 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, "sans-serif";
 }
 
-.banner{
-    padding: 10px;
-    background-color: #000;
+.header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 2rem;
+  background-color: none;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
 }
 
-.navbar-brand{
-    width: 200px;
+.header .logo img {
+  width: 200px;
+}
+
+.header .links {
+  font-size: 2rem;
+}
+
+.header .links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidenav-class {
+  display: none;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: -100% !important;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 99;
+  color: #fff;
+  transition: 0.6s;
+}
+
+.sidenav .nav-content {
+  position: absolute;
+  top: 0;
+  right: calc(-100% + -500px) !important;
+  width: 500px;
+  height: 100vh;
+  background-color: #000;
+  transition: 0.6s;
+}
+
+#sideNav:checked ~ .sidenav{
+  left: 0 !important;
+}
+
+#sideNav:checked ~ .sidenav .nav-content{
+  right: 0 !important;
+}
+
+.sidenav .links {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav .links div {
+  text-align: left;
+}
+
+.sidenav .links div a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  transition: 0.6s;
+  text-transform: uppercase;
+}
+
+.sidenav .links div a:hover {
+  color: #fff;
+  transition: 0.6s;
+}
+
+.sidenav .links div .social-links{
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.sidenav .links div .social-links i{
+  width: 50px;
+  overflow: hidden;
+  margin-right: 1.2rem;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 14px;
+  border-radius: 50%;
+  transition: 0.6s;
+}
+
+.sidenav .links div .social-links i:hover{
+  background-color: #fff;
+  color: #000;
+  transition: 0.6s;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  padding: 1.2rem;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+  transition: 0.6s;
+}
+
+.banner {
+  position: fixed;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s;
+}
+
+.banner::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner .main-content {
+  width: 100%;
+  padding: 0 20vw;
+  z-index: 10;
+}
+
+.banner .main-content .h1 {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.6vw;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 700;
+  width: 690px;
+}
+
+.banner .main-content .h2 {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.6vw;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 700;
+  width: 690px;
+}
+
+.banner .main-content .h3 {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  width: 690px;
+}
+
+.banner .main-content .h4 {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  width: 690px;
+}
+
+.banner .social-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem 2rem;
+}
+
+.banner .social-links i {
+  width: 50px;
+  overflow: hidden;
+  margin-right: 1.2rem;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 14px;
+  border-radius: 50%;
+  transition: 0.6s;
+}
+
+.banner .social-links i:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.6s;
+}
+
+.banner .main-content .explorer {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.banner .main-content .explorer .explore{
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.banner .main-content .explorer .explore:hover{
+  background-color: #fff;
+  color: #000;
+  transition: 0.6s;
+  box-shadow: 1px 1px 10px #fff;
+}
+
+.Typewriter {
+  display: inline-block;
+}
+
+#slideBanner:checked ~ .banner{
+  top: -100vh !important;
+  transition: 0.6s;
+}
+
+#slideBanner:checked ~ .header{
+  background-color: #000;
+  transition: 0.6s;
+}
+
+
+@media only screen and (max-width: 870px) {
+  
+.header .logo img{
+  width: 100px;
+}
+
+.banner .main-content .h1, 
+.banner .main-content .h2, 
+.banner .main-content .h3, 
+.banner .main-content .h4{
+  display: block;
+  width: 100%;
+  text-align:justify;
+}
+.banner .main-content .h2{
+  margin-bottom: 1.2rem;
+}
+
+.Typewriter{
+  display: block;
+}
+
+.banner .main-content .h1, 
+.banner .main-content .h2 {
+  font-size: 9vw;
+}
+
+.banner .main-content{
+  background-position: bottom;
+  background-size: cover;
+  padding: 1.8rem;
+}
+
+.sidenav .nav-content{
+  width: 100%;
+}
+
+.sidenav .links div {
+  text-align: left;
+}
+
+.banner .social-links{
+  text-align: center;
+}
 }
