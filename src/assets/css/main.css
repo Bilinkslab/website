@@ -64,11 +64,11 @@
   transition: 0.6s;
 }
 
-#sideNav:checked ~ .sidenav{
+#sideNav:checked ~ .sidenav {
   left: 0 !important;
 }
 
-#sideNav:checked ~ .sidenav .nav-content{
+#sideNav:checked ~ .sidenav .nav-content {
   right: 0 !important;
 }
 
@@ -102,13 +102,13 @@
   transition: 0.6s;
 }
 
-.sidenav .links div .social-links{
+.sidenav .links div .social-links {
   position: relative;
   width: 100%;
   text-align: center;
 }
 
-.sidenav .links div .social-links i{
+.sidenav .links div .social-links i {
   width: 50px;
   overflow: hidden;
   margin-right: 1.2rem;
@@ -120,7 +120,7 @@
   transition: 0.6s;
 }
 
-.sidenav .links div .social-links i:hover{
+.sidenav .links div .social-links i:hover {
   background-color: #fff;
   color: #000;
   transition: 0.6s;
@@ -158,9 +158,10 @@
   align-items: center;
   justify-content: center;
   transition: 0.6s;
+  z-index: 2;
 }
 
-.banner::before{
+.banner::before {
   content: "";
   position: absolute;
   top: 0;
@@ -263,7 +264,7 @@
   text-align: center;
 }
 
-.banner .main-content .explorer .explore{
+.banner .main-content .explorer .explore {
   border: 1px solid #fff;
   padding: 10px 20px;
   border-radius: 10px;
@@ -271,7 +272,7 @@
   cursor: pointer;
 }
 
-.banner .main-content .explorer .explore:hover{
+.banner .main-content .explorer .explore:hover {
   background-color: #fff;
   color: #000;
   transition: 0.6s;
@@ -282,59 +283,170 @@
   display: inline-block;
 }
 
-#slideBanner:checked ~ .banner{
+#slideBanner:checked ~ .banner {
   top: -100vh !important;
   transition: 0.6s;
 }
 
-#slideBanner:checked ~ .header{
+#slideBanner:checked ~ .header {
   background-color: #000;
   transition: 0.6s;
 }
 
-
-@media only screen and (max-width: 870px) {
-  
-.header .logo img{
-  width: 100px;
-}
-
-.banner .main-content .h1, 
-.banner .main-content .h2, 
-.banner .main-content .h3, 
-.banner .main-content .h4{
-  display: block;
+.footer {
+  position: relative;
   width: 100%;
-  text-align:justify;
-}
-.banner .main-content .h2{
-  margin-bottom: 1.2rem;
-}
-
-.Typewriter{
-  display: block;
+  min-height: calc(100vh - 68px);
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.banner .main-content .h1, 
-.banner .main-content .h2 {
-  font-size: 9vw;
+.footer .main-content {
+  position: relative;
+  width: 80%;
+  /* background-color: #f0f; */
 }
 
-.banner .main-content{
-  background-position: bottom;
-  background-size: cover;
-  padding: 1.8rem;
+.footer .main-content .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-.sidenav .nav-content{
-  width: 100%;
+.footer .main-content .head h1 {
+  /* background-color: #ff0; */
+  padding: 10px 14px;
+  margin-bottom: 1rem;
 }
 
-.sidenav .links div {
-  text-align: left;
+.footer .main-content .main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.banner .social-links{
+.footer .main-content .main section {
+  padding: 20px;
+  width: 50%;
+  margin-bottom: 3rem;
+}
+
+.footer .main-content .main section.contact {
   text-align: center;
 }
+
+.footer .main-content .main section.contact .ready {
+  text-align: center;
+  font-size: 3vw;
+  display: block;
+  text-transform: uppercase;
+}
+
+.footer .main-content .main section.contact .ready:nth-child(2) {
+  margin-bottom: 4rem;
+}
+
+.footer .main-content .foot{
+  position: relative;
+  width: 100%;
+  padding: 3rem 0;
+  text-align: right;
+}
+
+.footer .main-content .main section.contact a{
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  font-weight: bold;
+  font-size: 1.2vw;
+  transition: 0.6s;
+}
+
+.footer .main-content .main section.contact a:hover{
+  background-color: #fff;
+  color: #000;
+  transition: 0.6s;
+}
+
+.footer .main-content .main section.info h2{
+  font-size: 3vw;
+}
+
+.footer .main-content .main section.info ul{
+  list-style: none;
+  font-size: 1.2vw;
+  line-height: 3;
+}
+
+.footer .main-content .main section.info ul li a{
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+.footer .main-content .main section.info ul li a:hover{
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+@media only screen and (max-width: 870px) {
+  .header .logo img {
+    width: 100px;
+  }
+
+  .banner .main-content .h1,
+  .banner .main-content .h2,
+  .banner .main-content .h3,
+  .banner .main-content .h4 {
+    display: block;
+    width: 100%;
+    text-align: justify;
+  }
+  .banner .main-content .h2 {
+    margin-bottom: 1.2rem;
+  }
+
+  .Typewriter {
+    display: block;
+  }
+
+  .banner .main-content .h1,
+  .banner .main-content .h2 {
+    font-size: 9vw;
+  }
+
+  .banner .main-content {
+    background-position: bottom;
+    background-size: cover;
+    padding: 1.8rem;
+  }
+
+  .sidenav .nav-content {
+    width: 100%;
+  }
+
+  .sidenav .links div {
+    text-align: left;
+  }
+
+  .banner .social-links {
+    text-align: center;
+  }
+
+  .footer .main-content .head {
+    display: block;
+    text-align: center;
+  }
+
+  .footer .main-content .head h1 {
+    font-size: 5vw;
+  }
 }
