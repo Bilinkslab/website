@@ -340,10 +340,6 @@
     text-align: center;
   }
   }
-  font-family: Poppins;
-  src: url("../fonts/Poppins-Regular.ttf");
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -789,5 +785,15 @@
 
   .footer .main-content .head h1 {
     font-size: 5vw;
+  }
+  .footer .main-content .main{
+    display: block;
+  }
+  .footer .main-content .main section{
+    width: 100%;
+  }
+  .footer .main-content .main section.contact .ready{
+    display: inline-block;
+    margin-right: 10px;
   }
 }

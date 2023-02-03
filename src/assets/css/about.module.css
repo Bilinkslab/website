@@ -94,5 +94,24 @@ ul{
 .aboutContent ul{
     font-size: small;
 }
-    
+.imgContainer{
+  margin-left: 10%;
+  margin-bottom: 3rem;
+
+}
+.aboutCol1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+}
+.aboutCol1 img{
+    width: 200%;
+    height: auto;
+}
+.aboutCol2 img{
+
+    width: 70%;
+   height: auto;
+}
 }
